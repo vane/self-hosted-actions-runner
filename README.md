@@ -10,7 +10,10 @@ Create local directory and follow common steps
 
 Now use the container to add runner and fill out interactive form (TODO automate)  
 
-`docker run -ti --rm -v $(PWD)/actions-runner:/actions-runner szczepano/self-hosted-actions-runner /actions-runner/config.sh --url $REPOSITORY_URL --token $ GITHUB_TOKEN`
+`docker run -ti --rm -v $(PWD)/actions-runner:/actions-runner szczepano/self-hosted-actions-runner /actions-runner/config.sh --url $REPOSITORY_URL --token $GITHUB_TOKEN`
 
 To run self hosted runner use  
 `docker run -ti --rm -v $(PWD)/actions-runner:/actions-runner szczepano/self-hosted-actions-runner /actions-runner/run.sh`
+
+To remove self hosted runner use  
+`docker run -ti --rm -v $(PWD)/actions-runner:/actions-runner szczepano/self-hosted-actions-runner /actions-runner/config.sh remove --token $GITHUB_TOKEN`
